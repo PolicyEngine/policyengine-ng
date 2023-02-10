@@ -194,20 +194,10 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
-<p>This is the documentation for PolicyEngine Core, the open-source Python package powering PolicyEngine’s tax-benefit microsimulation models. It is a fork of <a class="reference external" href="https://github.com/openfisca/openfisca-core">OpenFisca-Core</a>, developed and maintained by <a class="reference external" href="https://www.openfisca.org/">OpenFisca</a>.</p>
-<p>PolicyEngine Core does not simulate any specific tax-benefit policy: instead, it is a general framework for building tax-benefit microsimulation models. It is currently used by PolicyEngine UK and PolicyEngine US, which each define the custom logic, parameters and data required to simulate the tax-benefit systems of the UK and the US respectively.</p>
-<p>The country models each provide:</p>
-<ul class="simple">
-<li><p>A set of <em>entity types</em> (e.g. <code class="docutils literal notranslate"><span class="pre">Person</span></code>).</p></li>
-<li><p>A set of <em>parameters</em> (e.g. <code class="docutils literal notranslate"><span class="pre">parameters.tax.flat_tax.rate</span></code>). Parameters are global data points that have different values for different time periods.</p></li>
-<li><p>A set of <em>variables</em> (e.g. <code class="docutils literal notranslate"><span class="pre">income_tax</span></code>). Variables are properties of entities that can be dependent on entities (including other variable values), parameters and the time period.</p></li>
-</ul>
-<p>PolicyEngine Core then enables users to:</p>
-<ul class="simple">
-<li><p>Calculate the value of a variable in a specific time period.</p></li>
-<li><p>Trace the computation tree of a calculation.</p></li>
-</ul>
-<p>PolicyEngine Core also includes many helper functions designed to simplify the process of modelling a country’s policy.</p>
+<p>This is the documentation for PolicyEngine Nigeria, an open-source model of the Nigerian tax-benefit system. Below is a demo of the PolicyEngine Nigeria API.</p>
+<iframe src="https://policyengine-policyengine-ng-docsdemo-nz51nk.streamlit.app/~/+/?embed=True&embedded=True" height="600" width="800"
+frameborder="0" scrolling="no"
+></iframe>
 </section>
 
     <script type="text/x-thebe-config">
