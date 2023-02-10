@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_page_config(layout="wide")
 
 hide_footer_style = """
 <style>
@@ -40,7 +41,6 @@ footer {
 """
 st.write(hide_footer_style, unsafe_allow_html=True)
 
-st.set_page_config(layout="wide")
 from streamlit_ace import st_ace
 import json
 from api_utils import calculate
