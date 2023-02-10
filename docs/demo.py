@@ -1,17 +1,49 @@
 import streamlit as st
 
+hide_footer_style = """
+<style>
+header {
+    display: none !important;
+}
+footer {
+    display: none !important;
+}
+section > div.block-container {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 500;
+}
+[data-baseweb="slider"] {
+    padding-left: 10px !important;
+}
+#MainMenu {
+    visibility: hidden;
+}
+footer {
+    visibility: hidden;
+}
+.modebar{
+      display: none !important;
+}
+</style>
+"""
+st.write(hide_footer_style, unsafe_allow_html=True)
+
 st.set_page_config(layout="wide")
 from streamlit_ace import st_ace
 import json
-import requests
-from policyengine_ng import Simulation, system
 from api_utils import calculate
-
-st.title("PolicyEngine Nigeria")
-
-st.write(
-    "PolicyEngine Nigeria is a model of Nigeria's tax and benefit system."
-)
 
 default_situation = {
     "household": {
