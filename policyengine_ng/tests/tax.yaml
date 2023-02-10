@@ -1,0 +1,6 @@
+- name: Tax is 10% of income
+  period: 2023
+  input:
+    employment_income: 100
+  output:
+    tax: 10

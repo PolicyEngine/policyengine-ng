@@ -1,0 +1,6 @@
+description: Example tax rate.
+values:
+  2010-01-01: 0.1
+metadata:
+  unit: /1
+  label: Tax rate
