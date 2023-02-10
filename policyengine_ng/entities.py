@@ -40,7 +40,7 @@ Household: Any = build_entity(
 
 Person = build_entity(
     key="person",
-    plural="persons",
+    plural="people",
     label="An individual. The minimal legal entity on which a legislation might be applied.",
     doc="""
 
