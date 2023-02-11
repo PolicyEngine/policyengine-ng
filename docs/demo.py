@@ -73,7 +73,10 @@ with data_input:
             height=300,
         )
     )
-    result = calculate(situation["household"], situation["policy"])
+    try:
+        result = calculate(situation["household"], situation["policy"])
+    except Exception as e:
+        st.error(e)
 
 with api_output:
     st.caption("PolicyEngine's API computes their taxes and benefits")

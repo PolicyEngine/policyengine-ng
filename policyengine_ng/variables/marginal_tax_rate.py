@@ -7,4 +7,3 @@ class marginal_tax_rate(Variable):
     definition_period = YEAR
     value_type = float
     unit = "/1"
-
