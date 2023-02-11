@@ -1,11 +1,4 @@
-- name: If tax exempt, no taxable income.
-  period: 2023
-  input:
-    is_tax_exempt: true
-  output:
-    taxable_income: 0
-
-- name: Otherwise gross income minus consolidated relief allowance.
+- name: Cross income minus consolidated relief allowance.
   period: 2023
   input:
     gross_income: 50_000
@@ -13,7 +6,7 @@
   output:
     taxable_income: 40_000
 
-- name: Non-negative
+- name: Non-negative.
   period: 2023
   input:
     gross_income: 10_000

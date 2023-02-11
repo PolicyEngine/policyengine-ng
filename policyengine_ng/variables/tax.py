@@ -10,6 +10,7 @@ class tax(Variable):
     unit = "currency-NGN"
 
     def formula(person, period, parameters):
-        market_income = person("market_income", period)
-        tax_rate = parameters(period).tax_rate
-        return market_income * tax_rate
+        exempt = person("is_tax_exempt", period)
+        main_rates = person("main_tax_rates", period)
+        minimum_tax = person("minimum_tax", period)
+        return ~exempt * max_(main_rates, minimum_tax)

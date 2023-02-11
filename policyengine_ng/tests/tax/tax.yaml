@@ -1,6 +1,16 @@
-- name: Tax is 10% of income
+- name: Tax-exempt people pay no tax.
   period: 2023
   input:
-    employment_income: 100
+    is_tax_exempt: true
+    main_tax_rates: 1
   output:
-    tax: 10
+    tax: 0
+
+- name: Otherwise they pay higher of main rates and minimum tax.
+  period: 2023
+  input:
+    is_tax_exempt: false
+    main_tax_rates: 1
+    minimum_tax: 2
+  output:
+    tax: 2

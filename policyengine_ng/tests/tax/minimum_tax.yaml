@@ -1,0 +1,6 @@
+- name: Minimum tax is 1% of gross income.
+  period: 2023
+  input:
+    gross_income: 100
+  output:
+    minimum_tax: 1

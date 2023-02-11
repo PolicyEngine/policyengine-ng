@@ -1,8 +1,8 @@
 from policyengine_ng.model_api import *
 
 
-class taxable_income(Variable):
-    label = "taxable income"
+class minimum_tax(Variable):
+    label = "minimum tax"
     entity = Person
     definition_period = YEAR
     value_type = float
@@ -10,7 +10,5 @@ class taxable_income(Variable):
 
     def formula(person, period, parameters):
         gross_income = person("gross_income", period)
-        consolidated_relief_allowance = person(
-            "consolidated_relief_allowance", period
-        )
-        return max_(0, gross_income - consolidated_relief_allowance)
+        p = parameters(period).tax
+        return p.minimum * gross_income
