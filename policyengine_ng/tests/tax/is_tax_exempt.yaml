@@ -1,0 +1,21 @@
+- name: Employment income at or below 30,000 means people don't have to file.
+  period: 2023
+  input:
+    employment_income: 30_000
+  output:
+    is_tax_exempt: true
+
+- name: If employment income exceeds 30,000, people have to file.
+  period: 2023
+  input:
+    employment_income: 30_001
+  output:
+    is_tax_exempt: false
+
+- name: People with income from sources other than employment must file regardless of amount.
+  period: 2023
+  input:
+    gross_income: 1
+    employment_income: 0
+  output:
+    is_tax_exempt: false
