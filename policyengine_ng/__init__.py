@@ -26,6 +26,10 @@ class CountryTaxBenefitSystem(TaxBenefitSystem):
     parameters_dir = COUNTRY_DIR / "parameters"
     auto_carry_over_input_variables = False
     modelled_policies = COUNTRY_DIR / "modelled_policies.yaml"
+    basic_inputs = [
+        "age",
+        "employment_income",
+    ]
 
 
 system = CountryTaxBenefitSystem()
