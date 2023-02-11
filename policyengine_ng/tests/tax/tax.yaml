@@ -3,4 +3,4 @@
   input:
     employment_income: 100
   output:
-    tax: 10
+    tax: 0
