@@ -1,0 +1,9 @@
+description: Nigeria requires that people file tax returns if their employment income exceeds this threshold.
+values:
+  2011-01-01: 30_000
+metadata:
+  unit: currency-NGN
+  label: Tax-exempt threshold
+  reference:
+    name: Personal Income Tax Act, Part VI, Section 43
+    href: https://www.firs.gov.ng/wp-content/uploads/2021/07/Personal-Income-Tax-Act.pdf#page=26

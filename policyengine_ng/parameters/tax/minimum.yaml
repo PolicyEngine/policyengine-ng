@@ -1,0 +1,9 @@
+description: Nigeria levies a minimum tax as a percent of gross income.
+values:
+  2011-01-01: 0.01
+metadata:
+  unit: /1
+  label: Minimum tax as percent of gross income
+  reference:
+    - name: Personal Income Tax Act | Sixth Schedule Section 37(3)
+      href: https://www.firs.gov.ng/wp-content/uploads/2021/07/Personal-Income-Tax-Act.pdf#page=83

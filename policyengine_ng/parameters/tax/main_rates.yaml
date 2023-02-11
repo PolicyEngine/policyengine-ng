@@ -1,0 +1,40 @@
+description: Nigeria taxes taxable income at these rates.
+# 1. First N300,000 @ 7 per cent [threshold: 0]
+# 2. Next N300,000 @ 11 per cent [threshold: 300_000]
+# 3. Next N500,000 @ 15 per cent [threshold: 600_000]
+# 4. Next N500,000 @ 19 per cent [threshold: 1_100_000]
+# 5. Next N 1, 600,000 @ 21 per cent [threshold: 1_600_000]
+# 6. Above N3, 200,000 @ 24 per cent [threshold: 3_200_000]
+brackets:
+  - threshold:
+      2011-01-01: 0
+    rate:
+      2011-01-01: 0.07
+  - threshold:
+      2011-01-01: 300_000 # "Next N300,000"
+    rate:
+      2011-01-01: 0.11
+  - threshold:
+      2011-01-01: 600_000 # "Next N500,000"
+    rate:
+      2011-01-01: 0.15
+  - threshold:
+      2011-01-01: 1_100_000 # "Next N500,000"
+    rate:
+      2011-01-01: 0.19
+  - threshold:
+      2011-01-01: 1_600_000 # "Next N1,600,000"
+    rate:
+      2011-01-01: 0.21
+  - threshold:
+      2011-01-01: 3_200_000 # "Above N3,200,000"
+    rate:
+      2011-01-01: 0.24
+metadata:
+  type: marginal_rate
+  threshold_unit: currency-NGN
+  rate_unit: /1
+  label: Tax rates
+  reference:
+    - name: Personal Income Tax Act | Sixth Schedule Section 37(3)
+      href: https://www.firs.gov.ng/wp-content/uploads/2021/07/Personal-Income-Tax-Act.pdf#page=83
