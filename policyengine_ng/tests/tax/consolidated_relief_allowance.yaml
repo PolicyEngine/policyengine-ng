@@ -1,0 +1,13 @@
+- name: Minimum is 200,000.
+  period: 2023
+  input:
+    gross_income: 0
+  output:
+    consolidated_relief_allowance: 200_000
+
+- name: 200,000 + 20% of gross income.
+  period: 2023
+  input:
+    gross_income: 100
+  output:
+    consolidated_relief_allowance: 200_020

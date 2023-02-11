@@ -1,0 +1,9 @@
+description: Nigeria deducts this percent of gross income from tax via its consolidated relief allowance.
+values:
+  2011-01-01: 0.2
+metadata:
+  unit: /1
+  label: Percent component of consolidated relief allowance
+  reference:
+    name: Personal Income Tax Act, Sixth Schedule, Section 1
+    href: https://www.firs.gov.ng/wp-content/uploads/2021/07/Personal-Income-Tax-Act.pdf#page=82
