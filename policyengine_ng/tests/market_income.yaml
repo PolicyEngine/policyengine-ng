@@ -1,6 +1,0 @@
-- name: Market income sums employment income
-  period: 2023
-  input:
-    employment_income: 1
-  output:
-    market_income: 1
