@@ -30,7 +30,7 @@ dev_requirements = [
 
 setup(
     name="policyengine-ng",
-    version="0.1.0",
+    version="0.2.0",
     author="PolicyEngine",
     author_email="hello@policyengine.org",
     classifiers=[
