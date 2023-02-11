@@ -1,0 +1,15 @@
+- name: Taxable income in the first bracket is taxed at 7%.
+  period: 2023
+  input:
+    taxable_income: 100
+  output:
+    main_tax_rates: 7
+
+- name: Someone with 10 million Naira will pay on the full structure.
+  period: 2023
+  input:
+    taxable_income: 10_000_000
+  output:
+    # 7% * 300k + 11% * 300k + 15% * 500k + 19% * 500k + 21% * 1.6m + 24% * (10m - 3.2m)
+    # 21_000 + 33_000 + 75_000 + 95_000 + 336_000 + 1_632_000
+    main_tax_rates: 2_192_000
