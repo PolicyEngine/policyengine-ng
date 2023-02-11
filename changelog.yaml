@@ -18,3 +18,8 @@
     added:
     - Live site requirements.
   date: 2023-02-11 13:23:04
+- bump: minor
+  changes:
+    added:
+    - Personal income tax logic.
+  date: 2023-02-11 13:43:36
