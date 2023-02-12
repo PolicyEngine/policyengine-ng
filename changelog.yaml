@@ -28,3 +28,8 @@
     added:
     - Formula for marginal_tax_rate.
   date: 2023-02-11 14:44:00
+- bump: patch
+  changes:
+    added:
+    - Tax integration test.
+  date: 2023-02-12 03:34:30

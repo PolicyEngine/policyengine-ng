@@ -20,7 +20,7 @@ dev_requirements = [
     "markupsafe==2.0.1",
     "mypy==0.991",
     "sphinx==4.5.0",
-    "sphinx-argparse==0.4.0",
+    "sphinx-argparse==0.4.1",
     "sphinx-math-dollar==1.2.1",
     "types-PyYAML==6.0.12.2",
     "types-requests==2.28.11.7",
@@ -30,7 +30,7 @@ dev_requirements = [
 
 setup(
     name="policyengine-ng",
-    version="0.4.0",
+    version="0.4.1",
     author="PolicyEngine",
     author_email="hello@policyengine.org",
     classifiers=[
