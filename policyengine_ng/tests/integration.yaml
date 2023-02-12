@@ -1,0 +1,11 @@
+- name: Person with N1,000,000 employment income.
+  period: 2023
+  input:
+    employment_income: 1_000_000
+  output:
+    is_tax_exempt: false # Needs under N30,000 earnings.
+    consolidated_relief_allowance: 400_000 # 200k + 20% * 1M
+    taxable_income: 600_000 # 1M - 400k
+    main_tax_rates: 54_000 # 7% * 300k + 11% * 300k
+    minimum_tax: 10_000 # 1% * 1M.
+    tax: 54_000
