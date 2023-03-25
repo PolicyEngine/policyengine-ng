@@ -1,4 +1,0 @@
-- bump: patch
-  changes:
-    fixed:
-    - Data syntax updated for new Core version.

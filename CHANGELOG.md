@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.2] - 2023-03-25 14:38:37
+
+### Fixed
+
+- Data syntax updated for new Core version.
+
 ## [0.4.1] - 2023-02-12 03:34:30
 
 ### Added
@@ -49,6 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+[0.4.2]: https://github.com/PolicyEngine/policyengine-ng/compare/0.4.1...0.4.2
 [0.4.1]: https://github.com/PolicyEngine/policyengine-ng/compare/0.4.0...0.4.1
 [0.4.0]: https://github.com/PolicyEngine/policyengine-ng/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/PolicyEngine/policyengine-ng/compare/0.2.0...0.3.0
