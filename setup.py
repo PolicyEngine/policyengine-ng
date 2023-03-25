@@ -15,17 +15,20 @@ general_requirements = [
 ]
 
 dev_requirements = [
-    "jupyter-book==0.13.1",
-    "furo==2022.9.29",
+    "black",
+    "coverage",
+    "jupyter-book",
+    "plotly",
+    "pytest",
+    "setuptools",
+    "wheel",
+    "yaml-changelog>=0.1.7",
+    "linecheck",
+    "furo<2023",
     "markupsafe==2.0.1",
-    "mypy==0.991",
-    "sphinx==4.5.0",
-    "sphinx-argparse==0.4.1",
-    "sphinx-math-dollar==1.2.1",
-    "types-PyYAML==6.0.12.2",
-    "types-requests==2.28.11.7",
-    "types-setuptools==65.6.0.2",
-    "types-urllib3==1.26.25.4",
+    "sphinx>=4.5.0,<5",
+    "sphinx-argparse>=0.3.2,<1",
+    "sphinx-math-dollar>=1.2.1,<2",
 ]
 
 setup(
