@@ -1,6 +1,0 @@
-- bump: minor
-  changes:
-    fixed:
-    - MTR calculation bugs.
-    added:
-    - Parameter metadata for all parameters.

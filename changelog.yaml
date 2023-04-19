@@ -38,3 +38,10 @@
     fixed:
     - Data syntax updated for new Core version.
   date: 2023-03-25 14:38:37
+- bump: minor
+  changes:
+    added:
+    - Parameter metadata for all parameters.
+    fixed:
+    - MTR calculation bugs.
+  date: 2023-04-19 13:01:35
