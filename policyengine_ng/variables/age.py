@@ -8,3 +8,4 @@ class age(Variable):
     definition_period = YEAR
     value_type = float
     unit = "year"
+    default_value = 18

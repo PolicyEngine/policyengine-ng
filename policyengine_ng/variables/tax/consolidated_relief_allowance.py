@@ -10,5 +10,5 @@ class consolidated_relief_allowance(Variable):
 
     def formula(person, period, parameters):
         gross_income = person("gross_income", period)
-        p = parameters(period).tax.consolidated_relief_allowance
+        p = parameters(period).gov.tax.consolidated_relief_allowance
         return p.flat + (gross_income * p.percent)

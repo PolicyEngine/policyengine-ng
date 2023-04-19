@@ -1,0 +1,6 @@
+description: The number of adults in each household whose marginal tax rates are simulated independently.
+values:
+  2000-01-01: 2
+metadata:
+  unit: adult
+  label: Marginal tax rate adults
