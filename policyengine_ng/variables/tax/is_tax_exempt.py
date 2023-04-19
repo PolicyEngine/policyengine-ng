@@ -9,7 +9,7 @@ class is_tax_exempt(Variable):
 
     def formula(person, period, parameters):
         employment_income = person("employment_income", period)
-        p = parameters(period).tax
+        p = parameters(period).gov.tax
         employment_income_at_or_below_threshold = (
             employment_income <= p.exempt_threshold
         )

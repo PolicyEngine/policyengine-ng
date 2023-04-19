@@ -10,5 +10,5 @@ class main_tax_rates(Variable):
 
     def formula(person, period, parameters):
         taxable_income = person("taxable_income", period)
-        p = parameters(period).tax
+        p = parameters(period).gov.tax
         return p.main_rates.calc(taxable_income)

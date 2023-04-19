@@ -16,6 +16,7 @@ class marginal_tax_rate(Variable):
         mtr_adult_count = parameters(
             period
         ).simulation.marginal_tax_rate_adults
+        print(simulation.input_variables)
         for adult_index in range(1, 1 + mtr_adult_count):
             alt_simulation = simulation.get_branch(
                 f"adult_{adult_index}_pay_rise"
@@ -40,6 +41,10 @@ class marginal_tax_rate(Variable):
                 household_net_income_higher_earnings - household_net_income
             )
             mtr_values += where(mask, 1 - increase / DELTA, 0)
+            print(household_net_income)
+            print(household_net_income_higher_earnings)
+            print(increase)
+            print(mtr_values)
         return mtr_values
 
 

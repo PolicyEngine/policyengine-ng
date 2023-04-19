@@ -2,8 +2,7 @@ from policyengine_ng.model_api import *
 
 
 class tax(Variable):
-    label = "tax"
-    documentation = "Example tax."
+    label = "individual tax"
     entity = Person
     definition_period = YEAR
     value_type = float
