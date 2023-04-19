@@ -45,3 +45,8 @@
     fixed:
     - MTR calculation bugs.
   date: 2023-04-19 13:01:35
+- bump: patch
+  changes:
+    fixed:
+    - API deployment action.
+  date: 2023-04-19 14:12:33

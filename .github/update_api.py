@@ -14,7 +14,7 @@ def main():
     )
     # Then, cd inside and run gcp/bump_country_package.py --country policyengine-uk --version {version}
     os.system(
-        f"cd policyengine-api && python gcp/bump_country_package.py --country policyengine-uk --version {version}"
+        f"cd policyengine-api && python gcp/bump_country_package.py --country policyengine-ng --version {version}"
     )
 
 
