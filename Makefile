@@ -14,7 +14,7 @@ test:
 	policyengine-core test policyengine_ng/tests -c policyengine_ng
 
 build:
-	python setup.py sdist bdist_wheel
+	python -m build
 
 changelog:
 	python .github/bump_version.py

@@ -22,6 +22,23 @@ dependencies = [
     "policyengine-core",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "build",
+    "furo==2022.9.29",
+    "jupyter-book==0.13.1",
+    "markupsafe==2.0.1",
+    "mypy==0.991",
+    "sphinx==4.5.0",
+    "sphinx-argparse==0.4.0",
+    "sphinx-math-dollar==1.2.1",
+    "towncrier>=24.8.0",
+    "types-PyYAML==6.0.12.2",
+    "types-requests==2.28.11.7",
+    "types-setuptools==65.6.0.2",
+    "types-urllib3==1.26.25.4",
+]
+
 [project.scripts]
 policyengine-core = "policyengine_core.scripts.policyengine_command:main"
 
