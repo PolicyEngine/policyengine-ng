@@ -50,3 +50,8 @@
     fixed:
     - API deployment action.
   date: 2023-04-19 14:12:33
+- bump: minor
+  changes:
+    added:
+    - Python 3.14 support. Dropped Python 3.10 and below.
+  date: 2026-02-24 17:31:10
