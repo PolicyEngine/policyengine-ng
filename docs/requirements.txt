@@ -1,2 +1,2 @@
-policyengine_ng==0.5.1
+policyengine_ng==0.6.0
 streamlit_ace
