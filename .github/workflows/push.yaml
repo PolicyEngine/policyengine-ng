@@ -24,15 +24,16 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
           token: ${{ secrets.POLICYENGINE_GITHUB }}
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.14
+          python-version: "3.14"
       - name: Build changelog
-        run: pip install yaml-changelog && make changelog
+        run: |
+          pip install towncrier
+          python .github/bump_version.py
+          towncrier build --yes --version $(python -c "import re; print(re.search(r'version = \"(.+?)\"', open('pyproject.toml').read()).group(1))")
       - name: Preview changelog update
         run: ".github/get-changelog-diff.sh"
       - name: Update changelog
@@ -56,12 +57,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.14
+          python-version: "3.14"
       - name: Install package
         run: make install
       - name: Run tests
         run: make test
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
   Publish:
     runs-on: ubuntu-latest
     if: |
@@ -73,7 +74,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.14
+          python-version: "3.14"
       - name: Publish a git tag
         run: ".github/publish-git-tag.sh || true"
       - name: Install package
@@ -97,13 +98,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
           token: ${{ secrets.POLICYENGINE_GITHUB }}
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.14
+          python-version: "3.14"
       - name: Install Wheel and Pytest
         run: pip3 install wheel setuptools pytest==5.4.3
       - name: Install package
