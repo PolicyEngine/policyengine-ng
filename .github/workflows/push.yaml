@@ -10,10 +10,10 @@ jobs:
       && (github.event.head_commit.message == 'Update PolicyEngine Nigeria')
     steps:
       - uses: actions/checkout@v4
+      - name: Install ruff
+        run: pip install ruff
       - name: Check formatting
-        uses: "lgeiger/black-action@master"
-        with:
-          args: ". -l 79 --check"
+        run: ruff format --check .
   versioning:
     name: Update versioning
     if: |

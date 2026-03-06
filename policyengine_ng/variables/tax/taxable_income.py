@@ -10,7 +10,5 @@ class taxable_income(Variable):
 
     def formula(person, period, parameters):
         gross_income = person("gross_income", period)
-        consolidated_relief_allowance = person(
-            "consolidated_relief_allowance", period
-        )
+        consolidated_relief_allowance = person("consolidated_relief_allowance", period)
         return max_(0, gross_income - consolidated_relief_allowance)

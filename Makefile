@@ -4,7 +4,7 @@ documentation:
 	myst build docs
 
 format:
-	black . -l 79
+	ruff format .
 
 install:
 	pip install -e .[dev]
