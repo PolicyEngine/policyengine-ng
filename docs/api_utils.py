@@ -67,9 +67,7 @@ def calculate(household: dict, reform: dict) -> dict:
                 if any([math.isinf(value) for value in result]):
                     raise ValueError("Infinite value")
                 else:
-                    household[entity_plural][entity_id][variable_name][
-                        period
-                    ] = result
+                    household[entity_plural][entity_id][variable_name][period] = result
             else:
                 entity_index = population.get_index(entity_id)
                 if variable.value_type == Enum:
@@ -86,17 +84,15 @@ def calculate(household: dict, reform: dict) -> dict:
                 else:
                     entity_result = result.tolist()[entity_index]
 
-                household[entity_plural][entity_id][variable_name][
-                    period
-                ] = entity_result
+                household[entity_plural][entity_id][variable_name][period] = (
+                    entity_result
+                )
         except Exception as e:
             if "axes" in household:
                 pass
             else:
                 logging.warn(f"Error computing {variable_name}: {e}")
-                household[entity_plural][entity_id][variable_name][
-                    period
-                ] = None
+                household[entity_plural][entity_id][variable_name][period] = None
 
     return household
 

@@ -15,7 +15,4 @@ class is_tax_exempt(Variable):
         )
         gross_income = person("gross_income", period)
         has_non_employment_income = gross_income > employment_income
-        return (
-            employment_income_at_or_below_threshold
-            & ~has_non_employment_income
-        )
+        return employment_income_at_or_below_threshold & ~has_non_employment_income
