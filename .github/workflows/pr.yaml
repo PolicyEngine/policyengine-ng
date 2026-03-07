@@ -4,27 +4,9 @@ on:
     branches: [master]
 jobs:
   Lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install ruff
-        run: pip install ruff
-      - name: Check formatting
-        run: ruff format --check .
+    uses: PolicyEngine/.github/.github/workflows/lint.yml@main
   check-changelog:
-    name: Check changelog fragment
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Check for changelog fragment
-        run: |
-          FRAGMENTS=$(find changelog.d -type f ! -name '.gitkeep' | wc -l)
-          if [ "$FRAGMENTS" -eq 0 ]; then
-            echo "::error::No changelog fragment found in changelog.d/"
-            echo "Add one with: echo 'Description.' > changelog.d/\$(git branch --show-current).<type>.md"
-            echo "Types: added, changed, fixed, removed, breaking"
-            exit 1
-          fi
+    uses: PolicyEngine/.github/.github/workflows/changelog.yml@main
   Test:
     runs-on: ${{ matrix.os }}
     strategy:
