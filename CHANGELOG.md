@@ -1,3 +1,10 @@
+## [0.5.4] - 2026-03-07
+
+### Changed
+
+- Use org-level reusable GitHub Actions workflows for lint and changelog checks.
+
+
 ## [0.5.3] - 2026-03-06
 
 ### Changed
