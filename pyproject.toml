@@ -18,7 +18,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Information Analysis",
 ]
 dependencies = [
-    "numpy",
+    "numpy>=1.26,<2",
     "policyengine-core",
 ]
 
