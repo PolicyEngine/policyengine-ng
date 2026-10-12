@@ -1,3 +1,11 @@
+## [0.6.1] - 2026-10-12
+
+### Changed
+
+- Migrated push workflow from the expired `POLICYENGINE_GITHUB` PAT to a short-lived GitHub App token (`APP_ID` / `APP_PRIVATE_KEY`), so the `versioning` job can push the "Update PolicyEngine Nigeria" commit that triggers Test, Publish, and Deploy. Matches the pattern already used by policyengine-core, policyengine-us, microdf, and policyengine-canada.
+- Publish to PyPI with trusted publishing (OIDC) from the `pypi` environment instead of a stored API token.
+
+
 ## [0.5.4] - 2026-03-07
 
 ### Changed
